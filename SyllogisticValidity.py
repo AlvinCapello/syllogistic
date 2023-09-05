@@ -154,6 +154,4 @@ def is_valid(p,q,r):
         return True
 
 
-is_valid("QiR", "PaQ", "PiR")
-
 
