@@ -1,20 +1,3 @@
-"""
-First: find some what to structure the argument input so that the data in it is iterable (I could just force this by
-fiat, but I think this application will be more robust if I have a way to fine-tune this process).
-
-Second: find some way to determine the number of terms in the argument. This will require finding the unique schematic
-characters and filtering out duplicates.
-
-Third: find some way to assert that a term is distributed. Not sure yet how I will do this without declarative constructs
-but I might be able to get the same effect through some conditional logic in a function.
-
-Fourth: we will also need to count the  number of negative sentences. If the conclusion is negative, this will cause
-some further conditional logic to fire.
-
-Fifth: we will need to determine the major, minor, and middle terms of the argument. For reference: the major term is the
-predicate of the conclusion, whilst the minor term is the subject of the conclusion.
-"""
-
 def is_distributed(p):
     if p[1] == "i":
         return None
@@ -132,12 +115,10 @@ def is_valid(p,q,r):
         print("Invalid: Fallacy of Four Terms")
         return False
     elif is_distributed(r) is not None and major_term in is_distributed(r):
-        #if is_undistributed(p) is not None and is_undistributed(q) is not None:
         if either_premises_undistributed(undistributed_terms,major_term):
             print("Invalid: Fallacy of Illicit Major")
             return False
     elif is_distributed(r) is not None and minor_term in is_distributed(r):
-        #if is_undistributed(p) is not None and is_undistributed(q) is not None:
         if either_premises_undistributed(undistributed_terms,minor_term):
             print("Invalid: Fallacy of Illicit Minor")
             return False
