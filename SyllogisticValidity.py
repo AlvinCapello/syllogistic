@@ -134,5 +134,24 @@ def is_valid(p,q,r):
         print("Valid")
         return True
 
+def converse(p):
+    if p[0] == "a":
+        print(p[2] + "i" + p[1])
+        return p[2] + "i" + p[1]
+    elif p[0] == "e":
+        print(p[2] + p[0] + p[1])
+        return p[2] + p[0] + p[1]
+    elif p[0] == "i":
+        print(p[2] + p[0] + p[1])
+        return p[2] + p[0] + p[1]
+    elif p[0] == "o":
+        print("None")
+        return None
+    return None
 
 
+def main():
+    p = input("Enter the first premise: ")
+    q = input("Enter the second premise: ")
+    r = input("Enter the conclusion: ")
+    is_valid(p,q,r)
