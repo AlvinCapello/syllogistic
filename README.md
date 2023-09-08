@@ -5,9 +5,9 @@ I also plan on expanding this code with functionality for performing immediate i
 
 Notation:
 
-"PaQ" =df. "All Ps are Qs"
-"PeQ" =df. "No Ps are Qs"
-"PiQ" =df. "Some Ps are Qs"
-"PoQ" =df. "Some Ps are not Qs"
+"PaQ" =df. "All Ps are Qs"  
+"PeQ" =df. "No Ps are Qs"  
+"PiQ" =df. "Some Ps are Qs"  
+"PoQ" =df. "Some Ps are not Qs"  
 
 For this program, you will be prompted to input categorical propositions (2 premises and a conclusion) using the notation outlined above. The program will then tell you whether the argument is valid, and if not, what fallacy it commits.
