@@ -92,5 +92,3 @@
   (cond ((not (equal? (length arg) 3)) "Invalid: not the correct argument form")
         ((> (length (list (terms (car arg)) (terms (cadr arg)) (terms (cddr arg)))) 3) "Invalid: Fallacy of Four Terms")
         (true #f)))
-
-(valid? '((all whales are mammals) (all mammals are animals) (some whales are animals)))
